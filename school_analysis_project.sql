@@ -10,8 +10,40 @@
 -- Tasks to be performed:
 
 -- Write a query to create a students table with appropriate data types for student id, student first name, student last name, class, and age where the student last name, student first name, and student id should be a NOT NULL constraint, and the student id should be in a primary key.
+CREATE DATABASE School;
+
+USE School;
+
+CREATE TABLE Students_Table(
+student_id int NOT NULL,
+student_fname varchar(100) NOT NULL,
+student_lname varchar(100) NOT NULL,
+class varchar(50),
+age int,
+PRIMARY KEY(student_id)
+);
 -- Write a query to create a marksheet table that includes score, year, ranking, class, and student id.
+CREATE TABLE Marksheet(
+score int NOT NULL,
+years int NOT NULL,
+ranking varchar(100) NOT NULL,
+class varchar(100),
+student_id int NOT NULL
+);
 -- Write a query to insert values in students and marksheet tables.
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(1,'krishna','gee',10,18);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(2,'Stephen','Christ',10,17);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(3,'Kailash','kumar',10,18);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(4,'ashish','jain',	10,16);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(5,'khusbu','jain',	10,17);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(6,'madhan','lal',10,16);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(7,'saurab','kothari',10,15);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(8,'vinesh','roy',10,14);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(9,'rishika','r',10,15);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(10,'sara',	'rayan',10,16);
+INSERT INTO Students_Table (student_id,student_fname,student_lname,class,age) VALUES(11,'rosy',	'kumar',10,16);
+
+
 -- Write a query to display student id and student first name from the student table if the age is greater than or equal to 16 and the student's last name is Kumar.
 -- Write a query to display all the details from the marksheet table if the score is between 800 and 1000.
 -- Write a query to display the marksheet details from the marksheet table by adding 5 to the score and by naming the column as new score.
